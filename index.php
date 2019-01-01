@@ -10,7 +10,10 @@ if($method == 'POST'){
 	$text = $json->queryResult->parameters->quantity;
 
 	$response = new \stdClass();
+	$response->fulfillmentText = "  ";
 	$response->fulfillmentMessages->text->text = "example value";
+	$response->source = ""
+
 	echo json_encode($response);
 }
 else
