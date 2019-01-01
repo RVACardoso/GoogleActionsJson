@@ -12,7 +12,7 @@ if($method == 'POST'){
 	$response = new \stdClass();
 	$response->fulfillmentText = "  ";
 	$response->fulfillmentMessages->text->text = "example value";
-	$response->source = ""
+	$response->source = "";
 
 	echo json_encode($response);
 }
