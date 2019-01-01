@@ -19,7 +19,7 @@ if($method == 'POST'){
 	];
 	$response->source = "";
 
-	echo json_encode($response);
+	return json_encode($response);
 }
 else
 {
