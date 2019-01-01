@@ -13,8 +13,7 @@ if($method == 'POST'){
 	$response->speech = $text;
 	$response->displayText = $text;
 	$response->source = "webhook";
-	$response->example = "example value";
-	
+	$response->fulfillmentMessages = "example value";
 	echo json_encode($response);
 }
 else
