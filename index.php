@@ -1,5 +1,7 @@
 <?php 
 
+echo "initial text message";
+
 $method = $_SERVER['REQUEST_METHOD'];
 
 // Process only when method is POST
