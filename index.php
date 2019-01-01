@@ -10,9 +10,6 @@ if($method == 'POST'){
 	$text = $json->queryResult->parameters->quantity;
 
 	$response = new \stdClass();
-	$response->speech = $text;
-	$response->displayText = $text;
-	$response->source = "webhook";
 	$response->fulfillmentMessages->text->text = "example value";
 	echo json_encode($response);
 }
