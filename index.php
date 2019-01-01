@@ -14,7 +14,7 @@ if($method == 'POST'){
 	$response->displayText = $text;
 	$response->source = "webhook";
 	
-	$responde->fulfillmentMessages->text->text = $text
+	$response->fulfillmentMessages->text->text = $text
 	echo json_encode($response);
 }
 else
