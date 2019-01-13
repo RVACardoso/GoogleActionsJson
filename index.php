@@ -14,7 +14,7 @@ if($method == 'POST'){
 	$response->fulfillmentMessages = [array("simpleResponses" => 
 					       array( "simpleResponses" => 
 						     [array("textToSpeech" => "say this test sentence", 
-							   "displaytext" => "display this text")
+							   "displayText" => "display this text")
 							     ])
 					      )];
 	$response->source = "webhook-sample";
