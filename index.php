@@ -13,7 +13,7 @@ if($method == 'POST'){
 	$response->fulfillmentText = "fulfill text";
 	$response->fulfillmentMessages = [array("simpleResponses" => 
 					       array( "simpleResponses" => 
-						     array(["textToSpeech" => "say this test sentence", 
+						     [array("textToSpeech" => "say this test sentence", 
 							   "displaytext" => "display this text")
 							     ])
 					      )];
