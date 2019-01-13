@@ -13,7 +13,7 @@ if($method == 'POST'){
 	$display = "a car is ". $text;
 	
 	$response = new \stdClass();
-	$response->fulfillmentText = "fulfill text";
+	$response->fulfillmentText = "fulfill text" . $text;
 	$response->fulfillmentMessages = [array("simpleResponses" => 
 					       array( "simpleResponses" => 
 						     [array("textToSpeech" => $speech, 
