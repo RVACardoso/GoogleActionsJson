@@ -9,12 +9,15 @@ if($method == 'POST'){
 
 	$text = $json->queryResult->parameters->quantity;
 	
+	$speech = "a bike is " . $text;
+	$display = "a car is ". $text;
+	
 	$response = new \stdClass();
 	$response->fulfillmentText = "fulfill text";
 	$response->fulfillmentMessages = [array("simpleResponses" => 
 					       array( "simpleResponses" => 
-						     [array("textToSpeech" => "a bike is " . $text, 
-							   "displayText" => "a car is ". $text)
+						     [array("textToSpeech" => $speech, 
+							   "displayText" => $display)
 							     ])
 					      )];
 	$response->source = "webhook-sample";
