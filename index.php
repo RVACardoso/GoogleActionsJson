@@ -10,14 +10,7 @@ if($method == 'POST'){
 	$text = $json->queryResult->parameters->quantity;
 	
 	$response = new \stdClass();
-	$response->fulfillmentText = "  ";
-	$response->fulfillmentMessages = array("simpleResponses" => 
-					       array( "simpleResponses" => 
-						     array("textToSpeech" => "say this test sentence", 
-							   "displaytext" => "display this text")
-						    )
-					      )
-		
+	$response->fulfillmentText = "fulfill text";
 	$response->source = "webhook-sample";
 
 	echo json_encode($response);
