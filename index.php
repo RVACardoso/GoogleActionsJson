@@ -11,6 +11,12 @@ if($method == 'POST'){
 	
 	$response = new \stdClass();
 	$response->fulfillmentText = "fulfill text";
+	$response->fulfillmentMessages = array("simpleResponses" => 
+					       array( "simpleResponses" => 
+						     array("textToSpeech" => "say this test sentence", 
+							   "displaytext" => "display this text")
+						    )
+					      );
 	$response->source = "webhook-sample";
 
 	echo json_encode($response);
