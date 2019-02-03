@@ -26,8 +26,6 @@ if($method == 'POST'){
 else
 {
 	echo "Method not allowed";
-	$test_server = file_get_contents('http://192.168.1.65:8080/test1.php');
-	echo $test_server;
 }
 
 ?>
