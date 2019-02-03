@@ -6,8 +6,10 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
-
 	$text = $json->queryResult->parameters->quantity;
+	
+	$test_server = file_get_contents('http://192.168.1.65:8080/test1.php');
+	echo $test_server;
 	
 	$speech = "a bike is " . $text;
 	$display = "a car is ". $text;
