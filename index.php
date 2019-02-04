@@ -32,7 +32,7 @@ if($method == 'POST'){
 else
 {
 	echo "Method not allowed\n";
-	echo file_get_contents("http://example.com");
+	echo file_get_contents("http://wildrc.epizy.com");
 
 }
 
