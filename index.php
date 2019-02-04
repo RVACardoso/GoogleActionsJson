@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 	$text = $json->queryResult->parameters->quantity;
 	
-	//$requestjson = file_get_contents('http://wildrc.epizy.com/data_json.php');
+	$requestjson = file_get_contents('http://wildrc.epizy.com/data_json.php');
 	//$json_data = json_decode($requestjson);
 	//$jsontext = $json->string;
 	
