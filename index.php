@@ -32,7 +32,7 @@ if($method == 'POST'){
 else
 {
 	echo "Method not allowed\n";
-	echo file_get_contents("http://wildrc.epizy.com");
+	echo file_get_contents("data_json.php");
 
 }
 
