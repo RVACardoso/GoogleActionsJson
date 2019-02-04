@@ -32,7 +32,13 @@ if($method == 'POST'){
 else
 {
 	echo "Method not allowed\n";
-	echo file_get_contents('data_json.php');
+	//echo file_get_contents('data_json.php');
+	
+	$lines_array=file('data_json.php');
+	// turn array into one variable
+	$lines_string=implode('',$lines_array);
+	//output, you can also save it locally on the server
+	echo $lines_string;
 }
 
 ?>
