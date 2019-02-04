@@ -8,8 +8,9 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 	$text = $json->queryResult->parameters->quantity;
 	
-	$requestjson = file_get_contents('data_json.php');
-	$json_data = json_decode($requestjson);
+	$lines_array=file('https://wildrc-test1.herokuapp.com/data_json.php');
+	$lines_string=implode('',$lines_array);
+	$json_data = json_decode($lines_string);
 	$jsontext = $json_data->string;
 	
 	$text = $jsontext;
@@ -34,11 +35,11 @@ else
 	echo "Method not allowed\n";
 	//echo file_get_contents('data_json.php');
 	
-	$lines_array=file('https://wildrc-test1.herokuapp.com/data_json.php');
+	//$lines_array=file('https://wildrc-test1.herokuapp.com/data_json.php');
 	// turn array into one variable
-	$lines_string=implode('',$lines_array);
+	//$lines_string=implode('',$lines_array);
 	//output, you can also save it locally on the server
-	echo $lines_string;
+	//echo $lines_string;
 }
 
 ?>
