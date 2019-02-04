@@ -31,8 +31,9 @@ if($method == 'POST'){
 }
 else
 {
-	echo "Method not allowed";
-	echo "text is: " . $requestjson;
+	echo "Method not allowed\n";
+	echo file_get_contents("http://example.com/");
+
 }
 
 ?>
