@@ -13,20 +13,18 @@ if($method == 'POST'){
 	// get stored data
 	$stored_data = file_get_contents('data.json');
 	$json_data = json_decode($stored_data);
-	$jsontext = $json_data->string;
+	$json_stored = $json_data->$request;
 	
 	//update stored data 
-	$json_data->string = "Bye world";
-	$content = json_encode($json_data);
-	file_put_contents("data.json", $content);
+// 	$json_data->string = "Bye world";
+// 	$content = json_encode($json_data);
+// 	file_put_contents("data.json", $content);
 	
-	$text = $request . "  " . $jsontext;
-	
-	$speech = "a bike is " . $text;
-	$display = "a car is ". $text;
+	$speech = "speech variable ";
+	$display = "display variable";
 	
 	$response = new \stdClass();
-	$response->fulfillmentText = "fulfill text" . $text;
+	$response->fulfillmentText = "The current " . $request . " is " . $json_stored;
 	$response->fulfillmentMessages = [array("simpleResponses" => 
 					       array( "simpleResponses" => 
 						     [array("textToSpeech" => $speech, 
