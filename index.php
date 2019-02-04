@@ -13,7 +13,7 @@ if($method == 'POST'){
 	$json_data = json_decode($lines_string);
 	$jsontext = $json_data->string;
 	
-	$text = $jsontext;
+	$text = $text . "  " . $jsontext;
 	
 	$speech = "a bike is " . $text;
 	$display = "a car is ". $text;
