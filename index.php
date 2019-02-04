@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 	$text = $json->queryResult->parameters->quantity;
 	
-	$requestjson = file_get_contents('http://wildrc.epizy.com/data_json.php');
+	$requestjson = file_get_contents('data_json.php');
 	$json_data = json_decode($requestjson);
 	$jsontext = $json_data->string;
 	
@@ -32,8 +32,6 @@ if($method == 'POST'){
 else
 {
 	echo "Method not allowed\n";
-	echo file_get_contents("data_json.php");
-
 }
 
 ?>
